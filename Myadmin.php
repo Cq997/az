@@ -1,4 +1,4 @@
-CREATE DATABASE haj_monitoring;
+
 USE haj_monitoring;
 
 -- جدول النطاقات
@@ -48,4 +48,3 @@ CREATE TABLE vehicles (
   tuwaik INT,
   tuwaik_icu INT,
   FOREIGN KEY (shift_id) REFERENCES shifts(id)
-);
