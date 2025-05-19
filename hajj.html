@@ -304,10 +304,12 @@ date_default_timezone_set('Asia/Riyadh');
                     <tr><td>تنهات                </td><td><input type="text"></td><td><input type="number" min="0" placeholder="0"></td><td><input type="number" min="0" placeholder="0"></td></tr>
                     <tr><td>خزام                 </td><td><input type="text"></td><td><input type="number" min="0" placeholder="0"></td><td><input type="number" min="0" placeholder="0"></td></tr>
                     <tr><td>هداج                 </td><td><input type="text"></td><td><input type="number" min="0" placeholder="0"></td><td><input type="number" min="0" placeholder="0"></td></tr>
-                    <tr><td>ضمك                  </td><td><input type="text"></td><td><input type="number" min="0" placeholder="0"></td><td><input type="number" min="0" placeholder="0"></td></tr>
+                    <tr><td>ضمك                 </td><td><input type="text"></td><td><input type="number" min="0" placeholder="0"></td><td><input type="number" min="0" placeholder="0"></td></tr>
                     <tr><td>ثريا                 </td><td><input type="text"></td><td><input type="number" min="0" placeholder="0"></td><td><input type="number" min="0" placeholder="0"></td></tr>
-                    <tr><td>سرير متحرك (Trolley) </td><td><input type="text"></td><td><input type="number" min="0" placeholder="0"></td><td><input type="number" min="0" placeholder="0"></td></tr>
-                    <tr><td>كرسي متحرك (Wheelchair)</td><td><input type="text"></td><td><input type="number" min="0" placeholder="0"></td><td><input type="number" min="0" placeholder="0"></td></tr>
+                    <tr><td>طمية                 </td><td><input type="text"></td><td><input type="number" min="0" placeholder="0"></td><td><input type="number" min="0" placeholder="0"></td></tr>
+                   <tr><td>مركبات رسمية بسفتي     </td><td><input type="text"></td><td><input type="number" min="0" placeholder="0"></td><td><input type="number" min="0" placeholder="0"></td></tr>
+                   <tr><td>سرير بعجلات (Trolley) </td><td><input type="text"></td><td><input type="number" min="0" placeholder="0"></td><td><input type="number" min="0" placeholder="0"></td></tr>
+                    <tr><td>كرسي كهربائي (Wheelchair)</td><td><input type="text"></td><td><input type="number" min="0" placeholder="0"></td><td><input type="number" min="0" placeholder="0"></td></tr>
                 </tbody>
             </table>
         </div>
@@ -366,7 +368,7 @@ function collectLogisticRows(tbl){
               receiver=r.cells[1].querySelector('input').value||'-',
               inCount=r.cells[2].querySelector('input').value||'0',
               outCount=r.cells[3].querySelector('input').value||'0';
-        return `${name} | المستلم: ${receiver} | تم التسليم: ${inCount} | لم تستلم: ${outCount}`;
+        return `${name} | لم تستلم من الفروع والموردين: ${receiver} |  تم التسليم : ${inCount} | المتوفر بالمخزون: ${outCount}`;
     }).join('\n');
 }
 
